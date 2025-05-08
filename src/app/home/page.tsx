@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ME from "../../public/My Photo.jpg";
+import ME from "../../../public/My Photo.jpg";
 export default function Home() {
   return (
     <div className="md:flex justify-between items-center mt-5 p-25">
@@ -17,7 +17,7 @@ export default function Home() {
           <h3>Available for new projects</h3>
         </div>
       </div>
-      <div className="">
+      <div>
         <Image
           src={ME}
           alt="mohanad image"

@@ -11,6 +11,10 @@ export const metadata: Metadata = {
 
 export const navLinks = [
   {
+    path: "home",
+    display: "Home",
+  },
+  {
     path: "about",
     display: "About",
   },
@@ -40,11 +44,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header className="md:flex justify-between mx-5 mt-3">
+        <header className="md:flex justify-between mx-5 mt-3 mb-5">
           <h1 className="text-3xl text-blue-500">Mohanad Kalloub</h1>
           <div className="md:flex">
             {navLinks.map((link) => (
               <Link
+                key={link.path}
                 href={link.path}
                 className="mx-2 text-blue-500 hover:text-blue-900 text-2xl"
               >
@@ -59,6 +64,9 @@ export default function RootLayout({
           </div>
         </header>
         {children}
+        <footer className="text-center text-blue-500 text-2xl">
+          <h1>2025 | Designed and coded with ❤️️ by Mohanad Kalloub</h1>
+        </footer>
       </body>
     </html>
   );
